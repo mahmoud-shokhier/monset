@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="com.example.abdelhameedahmed.monset.MainActivity">
+
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/aar_ic_play"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:checked="false"
+        android:text="ToggleButton"
+
+
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/holo_blue_light"
+        android:textOff="star"
+        android:textOn="stop" />
+</FrameLayout>

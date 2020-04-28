@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.example.abdelhameedahmed.monset"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "armeabi", "mips"
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/audio-processing-1.3.5.jar')
+    compile files('libs/commons-lang-2.6.jar')
+    compile files('libs/core-1.3.5.jar')
+    compile files('libs/core-audio-1.3.5.jar')
+    compile files('libs/core-feature-1.3.5.jar')
+    compile files('libs/jaudio-1.0.4.jar')
+    compile files('libs/JTransforms-1.3.5.jar')
+    compile files('libs/log4j-1.2.14.jar')
+    compile files('libs/slf4j-api-1.6.4.jar')
+    compile files('libs/slf4j-log4j12-1.6.4.jar')
+    compile files('libs/xuggle-video-1.3.5.jar')
+    compile files('libs/xuggle-xuggler-lgpl-5.5-20140728.jar')
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'
+    compile 'com.github.adrielcafe:AndroidAudioRecorder:0.3.0'
+    testCompile 'junit:junit:4.12'
+}
